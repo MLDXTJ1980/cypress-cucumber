@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://login.sentryc.com/auth/login",
+  "chromeWebSecurity": false,
+  "testFiles": "**/*.feature",
+  "defaultCommandTimeout": 5000
+}

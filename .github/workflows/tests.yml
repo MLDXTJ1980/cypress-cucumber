@@ -1,0 +1,19 @@
+name: Cypress Cucumber Tests
+on:
+push
+pull_request:
+type: [opened]
+
+jobs:
+  cypress-run:
+    name: Cypress run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2.2.7
+        with:
+          
+          start: npm start
