@@ -16,3 +16,11 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start
+
+      - name: Generate report
+        run: cd cypress-cucumber && npm run cy:report
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-cucumber-report
+          path: cypress-cucumber/cypress/cucumber-report/
