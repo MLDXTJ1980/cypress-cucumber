@@ -19,9 +19,9 @@ jobs:
           start: npm start
 
       - name: Generate report
-        run: cd cypress-cucumber && npm run report
+        run: npm run report
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
           name: cypress-cucumber-report
-          path: cypress-cucumber/cypress/cucumber-report/
+          path: cypress/cucumber-report/
