@@ -1,6 +1,6 @@
 name: Cypress Cucumber Tests
 on:
-push
+push:
 pull_request:
 type: [opened]
 
@@ -15,5 +15,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2.2.7
         with:
-          
           start: npm start
